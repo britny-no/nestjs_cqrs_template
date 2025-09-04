@@ -15,7 +15,7 @@
   npx depcruise --config dependency-cruiser.config.js src
 
 pre-commit: husky
-  .husky 폴더 없으면 초기화 필요
+  api 폴더속 .husky 없으면 초기화 필요
     npx husky init
 
 
@@ -43,8 +43,7 @@ pre-commit 설치
 - 핸들러에서 command/query/event 파라미터 사용되지 않으면, _앞에 붙이기
 - Domain Exception은 추상화 하지 않는다. 사례 조금더 발견되면 추상화
   - Infrastructure Exception은 추상화
-- Application(NestJs)/Infrastructure Exception GlobalFilter에서 catch 하도록
-  - Domain Exception은 핸들러에서 Application Exception으로 변환하는 과정 필요
+- Domain/Application(NestJs)/Infrastructure Exception GlobalFilter에서 catch 하도록
 - DTO는 엔드포인트별로 생성하기에, controller 메서드 명을 기반으로 DTO 명칭 정한다
   - List로 명칭 정해져도, 안에 내용이 단순 요소 한개만 다루고 스웨거상 LIST 표시 할수도 있다
 - CQRS 구조여도 NestJS는 모듈 단위로 DI를 수행하기에, 도메인 폴더 대신 모듈 폴더가 더 직관적이다
