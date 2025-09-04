@@ -1,0 +1,25 @@
+{
+  "apps": [
+    {
+      "name": "API",
+      "script": "/api/dist/main.js",
+      "instances": "0",
+      "exec_mode": "cluster",
+      "env_development": {
+        "NODE_ENV": "development",
+        "TZ": "Asia/Seoul"
+      },
+      "env_staging": {
+        "NODE_ENV": "staging",
+        "TZ": "Asia/Seoul"
+      },
+      "env_production": {
+        "NODE_ENV": "production",
+        "TZ": "Asia/Seoul"
+      },
+      "ignore_watch": [
+        "*.log"
+      ]
+    }
+  ]
+}
